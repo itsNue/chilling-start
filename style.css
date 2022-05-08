@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 /* Root */
 
 * {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Inconsolata', monospace;
     margin:0;
     padding:0;
 }
@@ -19,64 +21,26 @@ body {
 }
 
 .container{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 55%;
 }
-
-.column{
-    display: flex;
-    flex-direction: column;
-    padding: 20px 50px 0px 10px;
-    font-size: 18px;
+.box {
+    border-radius: 5px;
+    height: 300px;
 }
-
-/* Coloring */
-
-#greetings {
-    margin-top: 20px;
-    color: #53E2AE;
-    font-size: 40px;
-    font-weight: 700;
+.container--wallpaper {
+    background-color: aqua;
 }
-
-.column p{
-    color: #ffffff;
-    padding-bottom: 10px;
+.container--stats {
+    background-color: blueviolet;
 }
-
-.column a{
-    text-decoration: none;
-    display: inline-block;
-    color: #44475a;
-    transition: .3s;
+.container--bookmarks {
+    grid-column: 1 / -1;
+    background-color: cadetblue;
 }
-
-.column a:hover{
-    color: #919191;
-}
-
-a img {
-    width: 17px;
-    transform: translateY(2px);
-    padding-right: 4px;
-    /* -webkit-filter: grayscale(60%); */
-    filter: grayscale(50%);
-
-
-}
-
-#git {
-    filter: invert(100%);
-}
-
-#gif {
-    margin: 0;
-    width: max-content;
-    height: fit-content;
-}
-
 /* Responsive */
 
 @media screen and (max-width: 400px) {
