@@ -34,6 +34,12 @@ body {
 .container--wallpaper {
     background-color: aqua;
 }
+.container--wallpaper img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    border-radius: inherit;
+}
 .container--stats {
     background-color: blueviolet;
 }
